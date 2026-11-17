@@ -7,6 +7,8 @@ A plain HTML/JS version of the Shiny dashboard. No R or server is needed to view
 - `lib/` – bundled Plotly.js 2.25.2 (same version as the R app), Leaflet 1.9.4 and MapLibre GL 4.7.1. No CDN needed.
 - Basemap: OpenFreeMap "Positron" (open source, no API key), loaded from tiles.openfreemap.org.
 
+See **UPDATING.md** for how to edit text, tabs, data and the basemap.
+
 ## Hosting
 Any static host works: copy the folder to the city web server, or push it to GitHub and enable Pages
 (`.github/workflows/pages.yml` is included). Must be served over http(s); opening index.html straight

@@ -42,6 +42,7 @@
   .legend .bar { width:16px; height:140px; border:1px solid #bbb; }
   .legend .ticks { position:relative; height:140px; width:46px; }
   .legend .ticks span { position:absolute; left:0; transform:translateY(-50%); white-space:nowrap; }
+  .basemap-note { margin:6px 0 0; font-size:13px; color:var(--muted); }
   .err { color:#9e1b18; padding:12px; border:1px solid #9e1b18; border-radius:4px; }
   @media (max-width: 800px) {
     .layout { grid-template-columns: 1fr; gap:14px; }
@@ -80,6 +81,26 @@
 (function () {
   "use strict";
 
+  /* =====================================================================
+     SETTINGS YOU MAY WANT TO CHANGE  (see UPDATING.md for a walkthrough)
+     ===================================================================== */
+  var BASEMAP = {
+    // 1st choice: OpenFreeMap "Positron" vector basemap (open source, no key). Needs WebGL.
+    vectorStyle: "https://tiles.openfreemap.org/styles/positron",
+    vectorAttribution: '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> ' +
+      '&copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+      'Data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
+    vectorTimeoutMs: 8000,   // give up on the vector basemap after this long
+    // 2nd choice (automatic fallback): standard OpenStreetMap raster tiles, greyed to look like Positron.
+    rasterUrl: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    rasterAttribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+    rasterFilter: "grayscale(1) brightness(1.1) contrast(0.85)"
+  };
+  var MAP_CENTER = [47.585, -122.156], MAP_ZOOM = 11;
+
+  /* =====================================================================
+     TEXT: sources, titles, tabs  (one entry per tab, in display order)
+     ===================================================================== */
   var CENSUS = "https://data.census.gov/";
   var OFM = "https://ofm.wa.gov/washington-data-research/population-demographics/population-estimates/" +
             "historical-estimates-april-1-population-and-housing-state-counties-and-cities";
@@ -245,6 +266,42 @@
     }).catch(function (e) { fail(el, e); });
   }
 
+  // ---------- basemap with automatic fallback ----------
+  function addBasemap(map, mapDiv) {
+    var note = document.createElement("p");
+    note.className = "basemap-note"; note.hidden = true;
+    note.textContent = "The background map could not be loaded in this browser or network. " +
+      "The census tract data is still shown.";
+    mapDiv.parentNode.insertBefore(note, mapDiv.nextSibling);
+
+    var vec = null, loaded = false, fellBack = false;
+
+    function useRaster(reason) {
+      if (fellBack) return; fellBack = true;
+      console.warn("Vector basemap unavailable (" + reason + "); using raster tiles instead.");
+      try { if (vec) map.removeLayer(vec); } catch (e) {}
+      map.getPane("tilePane").style.filter = BASEMAP.rasterFilter;
+      var errors = 0, ok = 0;
+      var t = L.tileLayer(BASEMAP.rasterUrl, { maxZoom: 19, attribution: BASEMAP.rasterAttribution }).addTo(map);
+      t.on("tileload", function () { ok++; });
+      t.on("tileerror", function () { errors++; if (errors >= 4 && ok === 0) note.hidden = false; });
+    }
+
+    var hasGL = false;
+    try { var c = document.createElement("canvas"); hasGL = !!(c.getContext("webgl2") || c.getContext("webgl")); } catch (e) {}
+    if (!hasGL || !L.maplibreGL) { useRaster(!hasGL ? "no WebGL" : "MapLibre not loaded"); return; }
+
+    try {
+      vec = L.maplibreGL({ style: BASEMAP.vectorStyle, attribution: BASEMAP.vectorAttribution }).addTo(map);
+      var ml = vec.getMaplibreMap();
+      ml.on("load", function () { loaded = true; });
+      ml.on("error", function (ev) {
+        if (!loaded) useRaster((ev && ev.error && ev.error.message) || "style error");
+      });
+      setTimeout(function () { if (!loaded) useRaster("timed out"); }, BASEMAP.vectorTimeoutMs);
+    } catch (err) { useRaster(err && err.message); }
+  }
+
   // ---------- census tract map ----------
   function renderMap(el) {
     var ctl = document.createElement("div"); ctl.className = "ctl";
@@ -256,16 +313,8 @@
 
     Promise.all([getJSON("data/tracts.geojson"), getJSON("data/inferno.json")]).then(function (res) {
       var geo = res[0], ramp = res[1];
-      var map = L.map(mapDiv, { zoomControl: false }).setView([47.585, -122.156], 11);
-      // Basemap: OpenFreeMap "Positron" (open source, free, no API key; OpenStreetMap data).
-      // If the browser has no WebGL, the tract layer still draws on a plain background.
-      try {
-        L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/positron",
-          attribution: '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> ' +
-            '&copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
-            'Data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
-        }).addTo(map);
-      } catch (err) { console.warn("Basemap unavailable:", err); }
+      var map = L.map(mapDiv, { zoomControl: false }).setView(MAP_CENTER, MAP_ZOOM);
+      addBasemap(map, mapDiv);
 
       var layer = null, legend = null;
       mapState = { map: map };
