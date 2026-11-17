@@ -1,0 +1,254 @@
+{
+  "data": [
+    {
+      "orientation": "v",
+      "width": [0.60000000000000009, 0.59999999999999987, 0.59999999999999964, 0.59999999999999964],
+      "base": [12139, 34230, 14222, 60591],
+      "x": ["HoH 15-34", "HoH 35-64", "HoH 65+", "Total"],
+      "y": [4849, 1063, 119, 6031],
+      "text": ["Estimate: 4,849 <br> MOE: <U+00B1> 1,746 <br> Percent: 28.5% <br> Percent MOE: <U+00B1> 8.9%", "Estimate: 1,063 <br> MOE: <U+00B1> 779 <br> Percent: 3.0% <br> Percent MOE: <U+00B1> 2.2%", "Estimate: 119 <br> MOE: <U+00B1> 141 <br> Percent: 0.8% <br> Percent MOE: <U+00B1> 1.0%", "Estimate: 6,031 <br> MOE: <U+00B1> 1,894 <br> Percent: 9.1% <br> Percent MOE: <U+00B1> 2.8%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(0,101,152,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Other Non-Family",
+      "legendgroup": "Other Non-Family",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [0.60000000000000009, 0.59999999999999987, 0.59999999999999964, 0.59999999999999964],
+      "base": [4773, 26956, 6494, 38223],
+      "x": ["HoH 15-34", "HoH 35-64", "HoH 65+", "Total"],
+      "y": [7366, 7274, 7728, 22368],
+      "text": ["Estimate: 7,366 <br> MOE: <U+00B1> 2,051 <br> Percent: 43.4% <br> Percent MOE: <U+00B1> 9.3%", "Estimate: 7,274 <br> MOE: <U+00B1> 1,692 <br> Percent: 20.6% <br> Percent MOE: <U+00B1> 4.4%", "Estimate: 7,728 <br> MOE: <U+00B1> 1,912 <br> Percent: 53.9% <br> Percent MOE: <U+00B1> 10.0%", "Estimate: 22,368 <br> MOE: <U+00B1> 3,584 <br> Percent: 33.6% <br> Percent MOE: <U+00B1> 5.2%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(193,102,35,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Single Person",
+      "legendgroup": "Single Person",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [0.60000000000000009, 0.59999999999999987, 0.59999999999999964, 0.59999999999999964],
+      "base": [4212, 21798, 5970, 31980],
+      "x": ["HoH 15-34", "HoH 35-64", "HoH 65+", "Total"],
+      "y": [561, 5158, 524, 6243],
+      "text": ["Estimate: 561 <br> MOE: <U+00B1> 442 <br> Percent: 3.3% <br> Percent MOE: <U+00B1> 2.5%", "Estimate: 5,158 <br> MOE: <U+00B1> 1,453 <br> Percent: 14.6% <br> Percent MOE: <U+00B1> 3.9%", "Estimate: 524 <br> MOE: <U+00B1> 407 <br> Percent: 3.7% <br> Percent MOE: <U+00B1> 2.8%", "Estimate: 6,243 <br> MOE: <U+00B1> 1,531 <br> Percent: 9.4% <br> Percent MOE: <U+00B1> 2.3%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(59,109,100,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Other Family",
+      "legendgroup": "Other Family",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [0.60000000000000009, 0.59999999999999987, 0.59999999999999964, 0.59999999999999964],
+      "base": [0, 0, 0, 0],
+      "x": ["HoH 15-34", "HoH 35-64", "HoH 65+", "Total"],
+      "y": [4212, 21798, 5970, 31980],
+      "text": ["Estimate: 4,212 <br> MOE: <U+00B1> 1,287 <br> Percent: 24.8% <br> Percent MOE: <U+00B1> 6.2%", "Estimate: 21,798 <br> MOE: <U+00B1> 2,286 <br> Percent: 61.8% <br> Percent MOE: <U+00B1> 3.0%", "Estimate: 5,970 <br> MOE: <U+00B1> 1,299 <br> Percent: 41.6% <br> Percent MOE: <U+00B1> 6.0%", "Estimate: 31,980 <br> MOE: <U+00B1> 2,860 <br> Percent: 48.0% <br> Percent MOE: <U+00B1> 3.7%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(75,157,165,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Married-Couple Family",
+      "legendgroup": "Married-Couple Family",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 23.305936073059364,
+      "r": 7.3059360730593621,
+      "b": 29.555832295558329,
+      "l": 38.854296388542963
+    },
+    "paper_bgcolor": "rgba(255,255,255,1)",
+    "font": {
+      "color": "rgba(0,0,0,1)",
+      "family": "",
+      "size": 14.611872146118724
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "category",
+      "autorange": true,
+      "range": [0.40000000000000002, 4.5999999999999996],
+      "tickmode": "auto",
+      "ticktext": ["HoH 15-34", "HoH 35-64", "HoH 65+", "Total"],
+      "tickvals": [1, 2, 3, 4],
+      "categoryorder": "array",
+      "categoryarray": ["HoH 15-34", "HoH 35-64", "HoH 65+", "Total"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969286
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": true,
+      "range": [-3331.1000000000004, 69953.100000000006],
+      "tickmode": "auto",
+      "ticktext": ["0", "5k", "10k", "15k", "20k", "25k", "30k", "35k", "40k", "45k", "50k", "55k", "60k"],
+      "tickvals": [-4.5474735088646412e-13, 5000, 10000, 14999.999999999998, 20000, 25000, 30000, 35000, 40000, 45000, 49999.999999999993, 55000, 60000],
+      "categoryorder": "array",
+      "categoryarray": ["0", "5k", "10k", "15k", "20k", "25k", "30k", "35k", "40k", "45k", "50k", "55k", "60k"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969279
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": true,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(0,0,0,1)",
+        "family": "",
+        "size": 11.689497716894984
+      },
+      "title": {
+        "text": "Household Type",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative"
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "7b443fe76b8": {
+      "x": {},
+      "y": {},
+      "fill": {},
+      "text": {},
+      "type": "bar"
+    }
+  },
+  "cur_data": "7b443fe76b8",
+  "visdat": {
+    "7b443fe76b8": ["function (y) ", "x"]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+}

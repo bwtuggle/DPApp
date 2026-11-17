@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demographic Profile of the City of Bellevue</title>
+<link rel="stylesheet" href="lib/leaflet.css">
+<style>
+  :root { --brand:#006598; --ink:#222; --muted:#555; --line:#d9dee3; --bg:#fff; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; background:var(--bg); color:var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size:14px; line-height:1.45; }
+  .wrap { max-width:1400px; margin:0 auto; padding:12px 16px 32px; }
+  header h1 { color:var(--brand); font-size:30px; font-weight:500; margin:8px 0 2px; line-height:1.15; }
+  header p { color:var(--brand); font-style:italic; font-size:14px; margin:0 0 14px; }
+  .layout { display:grid; grid-template-columns: minmax(180px, 16.6%) 1fr; gap:22px; align-items:start; }
+  aside { background:#f5f5f5; border:1px solid #e3e3e3; border-radius:4px; padding:19px; font-size:14px; }
+  aside p { margin:0 0 14px; } aside p:last-child { margin-bottom:0; }
+  a { color:#337ab7; } a:hover { color:#23527c; }
+  main { min-width:0; }
+  [role=tablist] { display:flex; flex-wrap:wrap; gap:2px; border-bottom:1px solid #ddd; margin:0 0 14px; padding:0; }
+  [role=tab] { font:inherit; color:#337ab7; background:none; border:1px solid transparent; border-radius:4px 4px 0 0;
+    padding:8px 12px; margin-bottom:-1px; cursor:pointer; }
+  [role=tab]:hover { background:#eee; border-color:#eee #eee #ddd; }
+  [role=tab][aria-selected=true] { color:#555; background:#fff; border-color:#ddd #ddd #fff; cursor:default; }
+  [role=tab]:focus-visible { outline:2px solid var(--brand); outline-offset:1px; }
+  [role=tabpanel] { display:none; } [role=tabpanel].active { display:block; }
+  h3 { font-size:22px; font-weight:500; margin:6px 0 12px; line-height:1.2; }
+  .chart { width:100%; height:400px; }
+  #map { width:100%; height:400px; }
+  .ctl { margin-bottom:12px; } .ctl label { display:block; font-weight:700; margin-bottom:5px; }
+  .ctl select { font:inherit; padding:6px 8px; border:1px solid #ccc; border-radius:4px; min-width:260px; max-width:100%; background:#fff; }
+  .src { margin:12px 0 0; }
+  table.facts { border-collapse:collapse; width:auto; min-width:60%; }
+  table.facts th, table.facts td { padding:8px 14px; border-top:1px solid #ddd; text-align:left; }
+  table.facts tbody tr:nth-child(odd) { background:#f9f9f9; }
+  .legend { background:rgba(255,255,255,.9); padding:6px 10px 4px; border-radius:5px; box-shadow:0 0 12px rgba(0,0,0,.25);
+    font-size:12px; line-height:1.3; }
+  .legend .t { font-weight:700; margin-bottom:3px; }
+  .legend .row { display:flex; gap:6px; margin:8px 0 6px; }
+  .legend .bar { width:16px; height:140px; border:1px solid #bbb; }
+  .legend .ticks { position:relative; height:140px; width:46px; }
+  .legend .ticks span { position:absolute; left:0; transform:translateY(-50%); white-space:nowrap; }
+  .err { color:#9e1b18; padding:12px; border:1px solid #9e1b18; border-radius:4px; }
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; gap:14px; }
+    header h1 { font-size:24px; } h3 { font-size:18px; }
+    [role=tab] { padding:7px 9px; font-size:13px; }
+    .chart, #map { height:360px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Demographic Profile of the City of Bellevue</h1>
+    <p>Bellevue welcomes the world. Our diversity is our strength. We embrace the future while respecting our past.</p>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <p>This dashboard presents data about the Bellevue community. Use the tabs on the right side of the dashboard to explore different aspects of the City's population. Some of the tabs contain additional ways to sort and filter the data. The data sources used to create the visualizations in this dashboard are each provided separately.</p>
+      <p>Where possible the 90% margins of error are represented by red bars around the estimates. These indicate the likely range of uncertainty around estimates.</p>
+      <p>This dashboard was built using the <a href="http://shiny.rstudio.com">Shiny</a> framework for the <a href="https://www.r-project.org/">R</a> programming language.</p>
+    </aside>
+
+    <main>
+      <div role="tablist" id="tabs" aria-label="Dashboard sections"></div>
+      <div id="panels"></div>
+    </main>
+  </div>
+</div>
+
+<script src="lib/leaflet.js"></script>
+<script src="lib/plotly.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var CENSUS = "https://data.census.gov/";
+  var OFM = "https://ofm.wa.gov/washington-data-research/population-demographics/population-estimates/" +
+            "historical-estimates-april-1-population-and-housing-state-counties-and-cities";
+  function a(href, text) { return '<a href="' + href + '">' + text + '</a>'; }
+  var NHGIS = a("https://www.nhgis.org", "www.nhgis.org;");
+
+  // One entry per tab, in the same order as the original app.
+  var TABS = [
+    { id: "race-map", label: "Race/Ethnicity (1/2)", type: "map",
+      title: "Racial & Ethnic Composition of Bellevue Population by Census Tract (2020-2024)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2020-2024 American Community Survey.") +
+        " 5-Year Data Profiles (Table DP05). *Note: Dissimilarity Index scores are based on 2020 Census data & measure the within Census Tract racial/ethnic integration across Census Blocks. Scores can range from 0 - which would indicate complete group integration - to a score of 1 - which would indicate complete segregation." },
+    { id: "race-time", label: "Race/Ethnicity (2/2)", type: "plot", data: "racets",
+      title: "Racial & Ethnic Composition of Bellevue Population (2010-2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2010-2025 American Community Survey.") + " 1-Year Data Profiles (Table DP05)." },
+    { id: "population", label: "Total Population", type: "plot", data: "pop",
+      title: "Count of Bellevue Residents Over Time (1953-2026)",
+      src: "<strong>Source: </strong>" + a(OFM, "Washington State Office of Financial Management.") +
+        " April 1 Postcensal Estimates of Population (1960-Present); " +
+        a("https://eastsideheritagecenter.org/gift-shop/bellevue-timeline", "Bellevue Timeline.") +
+        " The Story of Washington's Leading Edge City From Homesteads to High Rises, 1863-2003." },
+    { id: "age-sex", label: "Age & Sex", type: "plot", data: "age",
+      title: "Count of Bellevue Residents by Age & Sex (2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2025 American Community Survey.") + " 1-Year Detailed Tables (Table B01001)." },
+    { id: "age-race", label: "Age & Race/Ethnicity", type: "plot", data: "rcage",
+      title: "Count of Bellevue Residents by Age & Race/Ethnicity (2020-2024)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2020-2024 American Community Survey.") + " 5-Year Detailed Tables (Table B01001B-I)." },
+    { id: "age-time", label: "Age Over Time", type: "plot", data: "ageTS",
+      title: "Percentage of Bellevue Residents by Age Group (2010-2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "American Community Survey.") + " 2010-2025 1-Year Subject Tables & Data Profiles (Tables S0101 & DP05)." },
+    { id: "birthplace", label: "Place of Birth/Citizenship", type: "plot", data: "pob",
+      title: "Count of Bellevue Residents by Place of Birth/Citizenship (1970-2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "U.S. Census Bureau.") +
+        " 1970-1990 Decennial Censuses (Tables NT25, NTPB9, NT33, NP37, & NP42). Retrieved via IPUMS NHGIS, University of Minnesota, " + NHGIS + " " +
+        a(CENSUS, "U.S. Census Bureau.") + " 2000 Decennial Census (Table DP2); " +
+        a(CENSUS, "American Community Survey.") + " 2010-2025 1-Year Data Profiles (Table DP02)." },
+    { id: "english-1", label: "English Speaking Ability (1/2)", type: "plot", data: "bvspoke",
+      title: "Percentage of Bellevue Residents by Primary Language Spoken at Home & English Proficiency (1980-2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "U.S. Census Bureau.") +
+        " 1980-1990 Decennial Censuses (Tables NT27 & NP28). Retrieved via IPUMS NHGIS, University of Minnesota, " + NHGIS + " " +
+        a(CENSUS, "U.S. Census Bureau.") + " 2000 Decennial Census (Table DP2); " +
+        a(CENSUS, "American Community Survey.") + " 2010-2025 1-Year Data Profiles (Table DP02)." },
+    { id: "english-2", label: "English Speaking Ability (2/2)", type: "plot", data: "spokecomp",
+      title: "Percentage of Residents by Primary Language Spoken at Home & English Proficiency (2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2025 American Community Survey.") + " 1-Year Data Profiles (Table DP02)." },
+    { id: "households", label: "Household Type & Age", type: "plot", data: "hhead",
+      title: "Count of Bellevue Households by Household Type & Head of Household Age (2025)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2025 American Community Survey.") + " 1-Year Detailed Tables (Table B25011)." },
+    { id: "languages", label: "Top 10 Languages", type: "plot", data: "lang",
+      title: "Count of Bellevue Area Residents by Primary Language & English Proficiency (2020-2024)",
+      src: "<strong>Source: </strong>" + a(CENSUS, "2020-2024 American Community Survey.") + " 5% PUMS Microdata Sample for Greater Bellevue PUMA." },
+    { id: "quick-facts", label: "Quick Facts", type: "facts",
+      title: "Quick Facts About the City of Bellevue",
+      src: "<strong>Source: </strong>" + a(OFM, "Washington State Office of Financial Management.") +
+        " April 1 Postcensal Estimates of Population (2026); " + a(CENSUS, "2020-2024 American Community Survey.") +
+        " 5-Year Detailed Tables (Table B01001). " + a(CENSUS, "2025 American Community Survey.") +
+        " 1-Year Detailed Tables & Data Profiles (Tables B19013, DP02, & DP05)." }
+  ];
+
+  var GROUPS = [
+    ["Total Population", "Total Population"],
+    ["Percent Non-Hispanic White", "White"],
+    ["Percent Non-Hispanic Asian", "Asian"],
+    ["Percent Hispanic/Latino", "Latino"],
+    ["Percent Non-Hispanic Multiracial", "Multiracial"],
+    ["Percent Non-Hispanic Black", "Black"],
+    ["Percent Non-Hispanic Other", "Other"],
+    ["Dissimilarity Index Score (2020)*", "Dissimilarity"]
+  ];
+
+  var tabsEl = document.getElementById("tabs");
+  var panelsEl = document.getElementById("panels");
+  var rendered = {};   // tab id -> true once its content has been drawn
+  var tabEls = [], panelEls = [];
+  var mapState = null; // set once the map is built
+
+  // ---------- build tab buttons and panels ----------
+  TABS.forEach(function (t, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.setAttribute("role", "tab");
+    b.id = "tab-" + t.id; b.setAttribute("aria-controls", "panel-" + t.id);
+    b.textContent = t.label; b.tabIndex = -1;
+    b.addEventListener("click", function () { select(i, true); });
+    tabsEl.appendChild(b); tabEls.push(b);
+
+    var p = document.createElement("section");
+    p.setAttribute("role", "tabpanel"); p.id = "panel-" + t.id;
+    p.setAttribute("aria-labelledby", b.id);
+    var h = document.createElement("h3"); h.textContent = t.title; p.appendChild(h);
+    var body = document.createElement("div"); body.className = "body"; p.appendChild(body);
+    var s = document.createElement("p"); s.className = "src"; s.innerHTML = t.src; p.appendChild(s);
+    panelsEl.appendChild(p); panelEls.push(p);
+  });
+
+  tabsEl.addEventListener("keydown", function (ev) {
+    var cur = tabEls.indexOf(document.activeElement); if (cur < 0) return;
+    var n = null;
+    if (ev.key === "ArrowRight") n = (cur + 1) % TABS.length;
+    else if (ev.key === "ArrowLeft") n = (cur - 1 + TABS.length) % TABS.length;
+    else if (ev.key === "Home") n = 0;
+    else if (ev.key === "End") n = TABS.length - 1;
+    if (n !== null) { ev.preventDefault(); select(n, true); tabEls[n].focus(); }
+  });
+
+  function select(i, updateHash) {
+    tabEls.forEach(function (b, k) {
+      var on = k === i;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+      panelEls[k].classList.toggle("active", on);
+    });
+    var t = TABS[i];
+    if (updateHash) { try { history.replaceState(null, "", "#" + t.id); } catch (e) {} }
+    if (!rendered[t.id]) { rendered[t.id] = true; render(t, panelEls[i].querySelector(".body")); }
+    else if (t.type === "plot") { Plotly.Plots.resize(panelEls[i].querySelector(".chart")); }
+    else if (t.type === "map" && mapState) { mapState.map.invalidateSize(); }
+  }
+
+  // ---------- helpers ----------
+  function getJSON(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(url + " (" + r.status + ")");
+      return r.json();
+    });
+  }
+  function fail(el, err) {
+    el.innerHTML = ""; var d = document.createElement("div"); d.className = "err";
+    d.textContent = "Sorry, this content could not be loaded. " + err.message; el.appendChild(d);
+  }
+
+  function render(t, el) {
+    if (t.type === "plot") renderPlot(t, el);
+    else if (t.type === "facts") renderFacts(el);
+    else if (t.type === "map") renderMap(el);
+  }
+
+  // ---------- plotly charts (pre-built figures exported from the R app) ----------
+  function renderPlot(t, el) {
+    var div = document.createElement("div"); div.className = "chart";
+    div.setAttribute("role", "img"); div.setAttribute("aria-label", t.title);
+    el.appendChild(div);
+    getJSON("data/" + t.data + ".json").then(function (fig) {
+      var layout = fig.layout || {}; layout.autosize = true; delete layout.width; delete layout.height;
+      var config = Object.assign({}, fig.config || {}, { responsive: true, displaylogo: false });
+      return Plotly.newPlot(div, fig.data, layout, config);
+    }).catch(function (e) { fail(el, e); });
+  }
+
+  // ---------- quick facts table ----------
+  function renderFacts(el) {
+    getJSON("data/facts.json").then(function (rows) {
+      var tbl = document.createElement("table"); tbl.className = "facts";
+      tbl.innerHTML = "<thead><tr><th>Measure</th><th>Estimate</th><th>MOE</th></tr></thead>";
+      var tb = document.createElement("tbody");
+      rows.forEach(function (r) {
+        var tr = document.createElement("tr");
+        [r.Measure, r.Estimate, r.MOE].forEach(function (v) {
+          var td = document.createElement("td"); td.textContent = v == null ? "" : v; tr.appendChild(td);
+        });
+        tb.appendChild(tr);
+      });
+      tbl.appendChild(tb); el.appendChild(tbl);
+    }).catch(function (e) { fail(el, e); });
+  }
+
+  // ---------- census tract map ----------
+  function renderMap(el) {
+    var ctl = document.createElement("div"); ctl.className = "ctl";
+    var lab = document.createElement("label"); lab.htmlFor = "var"; lab.textContent = "Choose a Group to Display (Click Tract Area for Details)";
+    var sel = document.createElement("select"); sel.id = "var";
+    GROUPS.forEach(function (g) { var o = document.createElement("option"); o.textContent = g[0]; o.value = g[1]; sel.appendChild(o); });
+    ctl.appendChild(lab); ctl.appendChild(sel); el.appendChild(ctl);
+    var mapDiv = document.createElement("div"); mapDiv.id = "map"; el.appendChild(mapDiv);
+
+    Promise.all([getJSON("data/tracts.geojson"), getJSON("data/inferno.json")]).then(function (res) {
+      var geo = res[0], ramp = res[1];
+      var map = L.map(mapDiv, { zoomControl: false }).setView([47.585, -122.156], 11);
+      // Map tiles: unchanged from the original app (Stadia Maps, Alidade Smooth).
+      L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png", {
+        maxZoom: 20,
+        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
+          '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      var layer = null, legend = null;
+      mapState = { map: map };
+
+      function colorFor(v, lo, hi) {
+        var f = hi > lo ? (v - lo) / (hi - lo) : 0;
+        return ramp[Math.max(0, Math.min(255, Math.round(f * 255)))];
+      }
+      function fmt(v, hi) {
+        if (hi <= 1) return v.toFixed(2);
+        return Math.abs(v) >= 100 ? Math.round(v).toLocaleString("en-US") : String(Math.round(v * 10) / 10);
+      }
+      function draw(v) {
+        var ek = "e_" + v, mk = "moe_" + v;
+        var vals = geo.features.map(function (f) { return f.properties[ek]; }).filter(function (x) { return x != null; });
+        var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+        if (layer) map.removeLayer(layer);
+        layer = L.geoJSON(geo, {
+          style: function (f) {
+            var c = colorFor(f.properties[ek], lo, hi);
+            return { color: c, weight: 0.5, fillColor: c, fillOpacity: 0.5, opacity: 0.5, smoothFactor: 0.2 };
+          },
+          onEachFeature: function (f, l) {
+            var p = f.properties;
+            l.bindPopup("Estimate: " + (p[ek] == null ? "NA" : p[ek]) + "<br>MOE: ±" + (p[mk] == null ? "NA" : p[mk]));
+          }
+        }).addTo(map);
+
+        if (legend) map.removeControl(legend);
+        legend = L.control({ position: "bottomright" });
+        legend.onAdd = function () {
+          var d = L.DomUtil.create("div", "legend");
+          var n = 5, ticks = "";
+          for (var i = 0; i < n; i++) {
+            var frac = i / (n - 1);   // 0 = top of bar = max (palette is reversed, high = dark at top)
+            ticks += '<span style="top:' + (frac * 100) + '%">' + fmt(hi - frac * (hi - lo), hi) + "</span>";
+          }
+          var grad = "linear-gradient(to bottom," + [0, 0.25, 0.5, 0.75, 1].map(function (f) {
+            return colorFor(hi - f * (hi - lo), lo, hi) + " " + (f * 100) + "%"; }).join(",") + ")";
+          d.innerHTML = '<div class="t">Estimate</div><div class="row"><div class="bar" style="background:' + grad +
+            '"></div><div class="ticks">' + ticks + "</div></div>";
+          return d;
+        };
+        legend.addTo(map);
+      }
+      sel.addEventListener("change", function () { draw(sel.value); });
+      draw(sel.value);
+      setTimeout(function () { map.invalidateSize(); }, 50);
+    }).catch(function (e) { fail(el, e); });
+  }
+
+  // ---------- start: honour a #tab-id link, otherwise open the first tab ----------
+  var start = 0, h = (location.hash || "").replace("#", "");
+  TABS.forEach(function (t, i) { if (t.id === h) start = i; });
+  select(start, false);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+{
+  "data": [
+    {
+      "orientation": "v",
+      "width": [0.44999999999999996, 0.45000000000000018, 0.45000000000000018, 0.45000000000000018, 0.44999999999999929],
+      "base": [0, 0, 0, 0, 0],
+      "x": [0.77500000000000002, 1.7749999999999999, 2.7749999999999999, 3.7749999999999999, 4.7750000000000004],
+      "y": [0.53299999999999992, 0.249, 0.32600000000000001, 0.22500000000000001, 0.22899999999999998],
+      "text": ["Estimate: 53.3% <br> MOE: <U+00B1> 3.3%", "Estimate: 24.9% <br> MOE: <U+00B1> 1.5%", "Estimate: 32.6% <br> MOE: <U+00B1> 0.8%", "Estimate: 22.5% <br> MOE: <U+00B1> 0.4%", "Estimate: 22.9% <br> MOE: <U+00B1> 0.1%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(0,101,152,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Language Other Than English (Percent)",
+      "legendgroup": "Language Other Than English (Percent)",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [0.45000000000000018, 0.45000000000000018, 0.45000000000000018, 0.44999999999999973, 0.44999999999999929],
+      "base": [0, 0, 0, 0, 0],
+      "x": [1.2250000000000001, 2.2250000000000001, 3.2250000000000001, 4.2249999999999996, 5.2249999999999996],
+      "y": [0.17300000000000001, 0.066000000000000003, 0.11599999999999999, 0.081000000000000003, 0.085000000000000006],
+      "text": ["Estimate: 17.3% <br> MOE: <U+00B1> 2.1%", "Estimate: 6.6% <br> MOE: <U+00B1> 1.0%", "Estimate: 11.6% <br> MOE: <U+00B1> 0.6%", "Estimate: 8.1% <br> MOE: <U+00B1> 0.3%", "Estimate: 8.5% <br> MOE: <U+00B1> 0.1%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(193,102,35,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Limited English Proficiency (Percent)",
+      "legendgroup": "Limited English Proficiency (Percent)",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [0.77500000000000002, 1.7749999999999999, 2.7749999999999999, 3.7749999999999999, 4.7750000000000004],
+      "y": [0.53299999999999992, 0.249, 0.32600000000000001, 0.22500000000000001, 0.22899999999999998],
+      "text": ["Estimate: 53.3% <br> MOE: <U+00B1> 3.3%", "Estimate: 24.9% <br> MOE: <U+00B1> 1.5%", "Estimate: 32.6% <br> MOE: <U+00B1> 0.8%", "Estimate: 22.5% <br> MOE: <U+00B1> 0.4%", "Estimate: 22.9% <br> MOE: <U+00B1> 0.1%"],
+      "type": "scatter",
+      "mode": "lines",
+      "opacity": 1,
+      "line": {
+        "color": "transparent"
+      },
+      "error_y": {
+        "array": [0.033000000000000029, 0.015000000000000013, 0.0080000000000000071, 0.0040000000000000036, 0.0010000000000000009],
+        "arrayminus": [0.033000000000000029, 0.015000000000000013, 0.0080000000000000071, 0.0040000000000000036, 0.0010000000000000009],
+        "type": "data",
+        "width": 1.2980769230769242,
+        "symmetric": false,
+        "color": "rgba(158,27,24,1)"
+      },
+      "name": "Language Other Than English (Percent)",
+      "legendgroup": "Language Other Than English (Percent)",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [1.2250000000000001, 2.2250000000000001, 3.2250000000000001, 4.2249999999999996, 5.2249999999999996],
+      "y": [0.17300000000000001, 0.066000000000000003, 0.11599999999999999, 0.081000000000000003, 0.085000000000000006],
+      "text": ["Estimate: 17.3% <br> MOE: <U+00B1> 2.1%", "Estimate: 6.6% <br> MOE: <U+00B1> 1.0%", "Estimate: 11.6% <br> MOE: <U+00B1> 0.6%", "Estimate: 8.1% <br> MOE: <U+00B1> 0.3%", "Estimate: 8.5% <br> MOE: <U+00B1> 0.1%"],
+      "type": "scatter",
+      "mode": "lines",
+      "opacity": 1,
+      "line": {
+        "color": "transparent"
+      },
+      "error_y": {
+        "array": [0.020999999999999991, 0.009999999999999995, 0.0060000000000000053, 0.0030000000000000027, 0.0010000000000000009],
+        "arrayminus": [0.020999999999999991, 0.010000000000000002, 0.0060000000000000053, 0.0030000000000000027, 0.0010000000000000009],
+        "type": "data",
+        "width": 1.2980769230769187,
+        "symmetric": false,
+        "color": "rgba(158,27,24,1)"
+      },
+      "name": "Limited English Proficiency (Percent)",
+      "legendgroup": "Limited English Proficiency (Percent)",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 23.305936073059364,
+      "r": 7.3059360730593621,
+      "b": 29.555832295558329,
+      "l": 38.854296388542963
+    },
+    "paper_bgcolor": "rgba(255,255,255,1)",
+    "font": {
+      "color": "rgba(0,0,0,1)",
+      "family": "",
+      "size": 14.611872146118724
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [0.40000000000000002, 5.5999999999999996],
+      "tickmode": "array",
+      "ticktext": ["Bellevue", "Seattle", "King County", "Washington", "United States"],
+      "tickvals": [1, 2, 3, 4, 5],
+      "categoryorder": "array",
+      "categoryarray": ["Bellevue", "Seattle", "King County", "Washington", "United States"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969286
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [-0.028299999999999999, 0.59429999999999994],
+      "tickmode": "array",
+      "ticktext": ["0", "10%", "20%", "30%", "40%", "50%"],
+      "tickvals": [0, 0.10000000000000001, 0.20000000000000001, 0.29999999999999999, 0.39999999999999997, 0.5],
+      "categoryorder": "array",
+      "categoryarray": ["0", "10%", "20%", "30%", "40%", "50%"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969279
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": true,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(0,0,0,1)",
+        "family": "",
+        "size": 11.689497716894984
+      },
+      "title": {
+        "text": "Language at Home",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "x": 0.29999999999999999,
+      "y": 100
+    },
+    "hovermode": "closest",
+    "barmode": "relative"
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "7b447fde7bea": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {},
+      "fill": {},
+      "text": {},
+      "type": "bar"
+    },
+    "7b44194074f9": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {},
+      "fill": {},
+      "text": {}
+    }
+  },
+  "cur_data": "7b447fde7bea",
+  "visdat": {
+    "7b447fde7bea": ["function (y) ", "x"],
+    "7b44194074f9": ["function (y) ", "x"]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+}

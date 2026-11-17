@@ -1,0 +1,254 @@
+{
+  "data": [
+    {
+      "orientation": "v",
+      "width": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "base": [59691, 76889, 79873, 93441, 100173, 100650, 100940, 102733, 109316, 106853, 110590, 110290, 114014, 109044, 114955, 112943, 109254, 109504, 114353],
+      "x": [1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025],
+      "y": [2388, 3810, 7005, 15748, 22635, 24140, 25507, 31257, 27110, 32961, 30825, 34169, 33581, 39101, 34474, 39822, 42325, 44883, 39835],
+      "text": ["Estimate: 2,388 <br> MOE: <U+00B1> NA <br> Percent: 3.80% <br> Percent MOE: <U+00B1> NA", "Estimate: 3,810 <br> MOE: <U+00B1> NA <br> Percent: 4.70% <br> Percent MOE: <U+00B1> NA", "Estimate: 7,005 <br> MOE: <U+00B1> NA <br> Percent: 8.10% <br> Percent MOE: <U+00B1> NA", "Estimate: 15,748 <br> MOE: <U+00B1> NA <br> Percent: 14.40% <br> Percent MOE: <U+00B1> NA", "Estimate: 22,635 <br> MOE: <U+00B1> 3,304 <br> Percent: 18.40% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 24,140 <br> MOE: <U+00B1> 3,521 <br> Percent: 19.30% <br> Percent MOE: <U+00B1> 2.80%", "Estimate: 25,507 <br> MOE: <U+00B1> 3,093 <br> Percent: 20.20% <br> Percent MOE: <U+00B1> 2.40%", "Estimate: 31,257 <br> MOE: <U+00B1> 3,899 <br> Percent: 23.30% <br> Percent MOE: <U+00B1> 2.90%", "Estimate: 27,110 <br> MOE: <U+00B1> 3,667 <br> Percent: 19.90% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 32,961 <br> MOE: <U+00B1> 3,686 <br> Percent: 23.60% <br> Percent MOE: <U+00B1> 2.60%", "Estimate: 30,825 <br> MOE: <U+00B1> 3,892 <br> Percent: 21.80% <br> Percent MOE: <U+00B1> 2.80%", "Estimate: 34,169 <br> MOE: <U+00B1> 3,499 <br> Percent: 23.70% <br> Percent MOE: <U+00B1> 2.40%", "Estimate: 33,581 <br> MOE: <U+00B1> 3,933 <br> Percent: 22.80% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 39,101 <br> MOE: <U+00B1> 3,654 <br> Percent: 26.40% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 34,474 <br> MOE: <U+00B1> 3,890 <br> Percent: 23.10% <br> Percent MOE: <U+00B1> 2.60%", "Estimate: 39,822 <br> MOE: <U+00B1> 4,290 <br> Percent: 26.10% <br> Percent MOE: <U+00B1> 2.80%", "Estimate: 42,325 <br> MOE: <U+00B1> 3,836 <br> Percent: 27.90% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 44,883 <br> MOE: <U+00B1> 4,087 <br> Percent: 29.10% <br> Percent MOE: <U+00B1> 2.60%", "Estimate: 39,835 <br> MOE: <U+00B1> 3,986 <br> Percent: 25.80% <br> Percent MOE: <U+00B1> 2.60%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(75,157,165,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Noncitizen",
+      "legendgroup": "Noncitizen",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "base": [57837, 73883, 75330, 82407, 82213, 83498, 81495, 83410, 86854, 85160, 89284, 87943, 92358, 87276, 86722, 86878, 83833, 79206, 81633],
+      "x": [1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025],
+      "y": [1854, 3006, 4543, 11034, 17960, 17152, 19445, 19323, 22462, 21693, 21306, 22347, 21656, 21768, 28233, 26065, 25421, 30298, 32720],
+      "text": ["Estimate: 1,854 <br> MOE: <U+00B1> NA <br> Percent: 3.00% <br> Percent MOE: <U+00B1> NA", "Estimate: 3,006 <br> MOE: <U+00B1> NA <br> Percent: 3.70% <br> Percent MOE: <U+00B1> NA", "Estimate: 4,543 <br> MOE: <U+00B1> NA <br> Percent: 5.20% <br> Percent MOE: <U+00B1> NA", "Estimate: 11,034 <br> MOE: <U+00B1> NA <br> Percent: 10.10% <br> Percent MOE: <U+00B1> NA", "Estimate: 17,960 <br> MOE: <U+00B1> 2,688 <br> Percent: 14.60% <br> Percent MOE: <U+00B1> 2.20%", "Estimate: 17,152 <br> MOE: <U+00B1> 3,033 <br> Percent: 13.70% <br> Percent MOE: <U+00B1> 2.40%", "Estimate: 19,445 <br> MOE: <U+00B1> 2,559 <br> Percent: 15.40% <br> Percent MOE: <U+00B1> 2.00%", "Estimate: 19,323 <br> MOE: <U+00B1> 3,106 <br> Percent: 14.40% <br> Percent MOE: <U+00B1> 2.30%", "Estimate: 22,462 <br> MOE: <U+00B1> 2,877 <br> Percent: 16.50% <br> Percent MOE: <U+00B1> 2.10%", "Estimate: 21,693 <br> MOE: <U+00B1> 2,868 <br> Percent: 15.50% <br> Percent MOE: <U+00B1> 2.10%", "Estimate: 21,306 <br> MOE: <U+00B1> 2,769 <br> Percent: 15.10% <br> Percent MOE: <U+00B1> 2.00%", "Estimate: 22,347 <br> MOE: <U+00B1> 2,338 <br> Percent: 15.50% <br> Percent MOE: <U+00B1> 1.60%", "Estimate: 21,656 <br> MOE: <U+00B1> 2,563 <br> Percent: 14.70% <br> Percent MOE: <U+00B1> 1.70%", "Estimate: 21,768 <br> MOE: <U+00B1> 2,545 <br> Percent: 14.70% <br> Percent MOE: <U+00B1> 1.70%", "Estimate: 28,233 <br> MOE: <U+00B1> 3,434 <br> Percent: 18.90% <br> Percent MOE: <U+00B1> 2.30%", "Estimate: 26,065 <br> MOE: <U+00B1> 2,937 <br> Percent: 17.10% <br> Percent MOE: <U+00B1> 1.90%", "Estimate: 25,421 <br> MOE: <U+00B1> 3,202 <br> Percent: 16.80% <br> Percent MOE: <U+00B1> 2.10%", "Estimate: 30,298 <br> MOE: <U+00B1> 3,069 <br> Percent: 19.60% <br> Percent MOE: <U+00B1> 2.00%", "Estimate: 32,720 <br> MOE: <U+00B1> 4,360 <br> Percent: 21.20% <br> Percent MOE: <U+00B1> 2.80%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(59,109,100,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Naturalized Citizen",
+      "legendgroup": "Naturalized Citizen",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "base": [24919, 28605, 32361, 36771, 39955, 39257, 39944, 45147, 44325, 45261, 42673, 40816, 40626, 39668, 45751, 41872, 40265, 38432, 40720],
+      "x": [1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025],
+      "y": [32918, 45278, 42969, 45636, 42258, 44241, 41551, 38263, 42529, 39899, 46611, 47127, 51732, 47608, 40971, 45006, 43568, 40774, 40913],
+      "text": ["Estimate: 32,918 <br> MOE: <U+00B1> NA <br> Percent: 53.00% <br> Percent MOE: <U+00B1> NA", "Estimate: 45,278 <br> MOE: <U+00B1> NA <br> Percent: 56.10% <br> Percent MOE: <U+00B1> NA", "Estimate: 42,969 <br> MOE: <U+00B1> NA <br> Percent: 49.50% <br> Percent MOE: <U+00B1> NA", "Estimate: 45,636 <br> MOE: <U+00B1> NA <br> Percent: 41.80% <br> Percent MOE: <U+00B1> NA", "Estimate: 42,258 <br> MOE: <U+00B1> 3,111 <br> Percent: 34.40% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 44,241 <br> MOE: <U+00B1> 3,398 <br> Percent: 35.50% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 41,551 <br> MOE: <U+00B1> 3,156 <br> Percent: 32.90% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 38,263 <br> MOE: <U+00B1> 3,356 <br> Percent: 28.60% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 42,529 <br> MOE: <U+00B1> 4,394 <br> Percent: 31.20% <br> Percent MOE: <U+00B1> 3.20%", "Estimate: 39,899 <br> MOE: <U+00B1> 3,206 <br> Percent: 28.50% <br> Percent MOE: <U+00B1> 2.30%", "Estimate: 46,611 <br> MOE: <U+00B1> 3,643 <br> Percent: 33.00% <br> Percent MOE: <U+00B1> 2.60%", "Estimate: 47,127 <br> MOE: <U+00B1> 3,890 <br> Percent: 32.60% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 51,732 <br> MOE: <U+00B1> 4,151 <br> Percent: 35.00% <br> Percent MOE: <U+00B1> 2.80%", "Estimate: 47,608 <br> MOE: <U+00B1> 4,030 <br> Percent: 32.10% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 40,971 <br> MOE: <U+00B1> 3,506 <br> Percent: 27.40% <br> Percent MOE: <U+00B1> 2.30%", "Estimate: 45,006 <br> MOE: <U+00B1> 3,888 <br> Percent: 29.50% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 43,568 <br> MOE: <U+00B1> 3,777 <br> Percent: 28.70% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 40,774 <br> MOE: <U+00B1> 3,603 <br> Percent: 26.40% <br> Percent MOE: <U+00B1> 2.30%", "Estimate: 40,913 <br> MOE: <U+00B1> 4,263 <br> Percent: 26.50% <br> Percent MOE: <U+00B1> 2.80%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(0,101,152,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Born US Citizen (Outside WA)",
+      "legendgroup": "Born US Citizen (Outside WA)",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      "base": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "x": [1970, 1980, 1990, 2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025],
+      "y": [24919, 28605, 32361, 36771, 39955, 39257, 39944, 45147, 44325, 45261, 42673, 40816, 40626, 39668, 45751, 41872, 40265, 38432, 40720],
+      "text": ["Estimate: 24,919 <br> MOE: <U+00B1> NA <br> Percent: 40.10% <br> Percent MOE: <U+00B1> NA", "Estimate: 28,605 <br> MOE: <U+00B1> NA <br> Percent: 35.40% <br> Percent MOE: <U+00B1> NA", "Estimate: 32,361 <br> MOE: <U+00B1> NA <br> Percent: 37.20% <br> Percent MOE: <U+00B1> NA", "Estimate: 36,771 <br> MOE: <U+00B1> NA <br> Percent: 33.70% <br> Percent MOE: <U+00B1> NA", "Estimate: 39,955 <br> MOE: <U+00B1> 3,014 <br> Percent: 32.50% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 39,257 <br> MOE: <U+00B1> 2,910 <br> Percent: 31.50% <br> Percent MOE: <U+00B1> 2.30%", "Estimate: 39,944 <br> MOE: <U+00B1> 2,752 <br> Percent: 31.60% <br> Percent MOE: <U+00B1> 2.20%", "Estimate: 45,147 <br> MOE: <U+00B1> 3,666 <br> Percent: 33.70% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 44,325 <br> MOE: <U+00B1> 3,862 <br> Percent: 32.50% <br> Percent MOE: <U+00B1> 2.80%", "Estimate: 45,261 <br> MOE: <U+00B1> 3,617 <br> Percent: 32.40% <br> Percent MOE: <U+00B1> 2.60%", "Estimate: 42,673 <br> MOE: <U+00B1> 3,345 <br> Percent: 30.20% <br> Percent MOE: <U+00B1> 2.40%", "Estimate: 40,816 <br> MOE: <U+00B1> 3,226 <br> Percent: 28.30% <br> Percent MOE: <U+00B1> 2.20%", "Estimate: 40,626 <br> MOE: <U+00B1> 3,289 <br> Percent: 27.50% <br> Percent MOE: <U+00B1> 2.20%", "Estimate: 39,668 <br> MOE: <U+00B1> 3,266 <br> Percent: 26.80% <br> Percent MOE: <U+00B1> 2.20%", "Estimate: 45,751 <br> MOE: <U+00B1> 4,091 <br> Percent: 30.60% <br> Percent MOE: <U+00B1> 2.70%", "Estimate: 41,872 <br> MOE: <U+00B1> 3,847 <br> Percent: 27.40% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 40,265 <br> MOE: <U+00B1> 2,883 <br> Percent: 26.60% <br> Percent MOE: <U+00B1> 1.90%", "Estimate: 38,432 <br> MOE: <U+00B1> 3,819 <br> Percent: 24.90% <br> Percent MOE: <U+00B1> 2.50%", "Estimate: 40,720 <br> MOE: <U+00B1> 4,428 <br> Percent: 26.40% <br> Percent MOE: <U+00B1> 2.90%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(22,67,86,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Born in WA",
+      "legendgroup": "Born in WA",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 23.305936073059364,
+      "r": 7.3059360730593621,
+      "b": 29.555832295558329,
+      "l": 48.152760481527601
+    },
+    "paper_bgcolor": "rgba(255,255,255,1)",
+    "font": {
+      "color": "rgba(0,0,0,1)",
+      "family": "",
+      "size": 14.611872146118724
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [1966.7, 2028.3],
+      "tickmode": "array",
+      "ticktext": ["1970", "1980", "1990", "2000", "2010", "2020"],
+      "tickvals": [1970, 1980, 1990, 2000, 2010, 2020],
+      "categoryorder": "array",
+      "categoryarray": ["1970", "1980", "1990", "2000", "2010", "2020"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969286
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [-7719.3500000000004, 162106.35000000001],
+      "tickmode": "array",
+      "ticktext": ["0", "25k", "50k", "75k", "100k", "125k", "150k"],
+      "tickvals": [0, 25000, 50000, 75000, 100000, 125000, 150000],
+      "categoryorder": "array",
+      "categoryarray": ["0", "25k", "50k", "75k", "100k", "125k", "150k"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969279
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": true,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(0,0,0,1)",
+        "family": "",
+        "size": 11.689497716894984
+      },
+      "title": {
+        "text": "Place of Birth/Citizenship",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative"
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "7b446723527c": {
+      "x": {},
+      "y": {},
+      "fill": {},
+      "text": {},
+      "type": "bar"
+    }
+  },
+  "cur_data": "7b446723527c",
+  "visdat": {
+    "7b446723527c": ["function (y) ", "x"]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+}

@@ -1,0 +1,267 @@
+{
+  "data": [
+    {
+      "orientation": "v",
+      "width": [0.45000000000000018, 0.45000000000000018, 0.45000000000000018, 0.44999999999999929, 0.44999999999999929, 0.44999999999999996],
+      "base": [0, 0, 0, 0, 0, 0],
+      "x": [1.7749999999999999, 2.7749999999999999, 3.7749999999999999, 4.7750000000000004, 5.7750000000000004, 0.77499999999999991],
+      "y": [6675, 11944, 17783, 18466, 12331, 5481],
+      "text": ["Estimate: 6,675 <br> MOE: <U+00B1> 2,147", "Estimate: 11,944 <br> MOE: <U+00B1> 3,487", "Estimate: 17,783 <br> MOE: <U+00B1> 4,230", "Estimate: 18,466 <br> MOE: <U+00B1> 4,712", "Estimate: 12,331 <br> MOE: <U+00B1> 1,945", "Estimate: 5,481 <br> MOE: <U+00B1> 1,810"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(78,132,42,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Female",
+      "legendgroup": "Female",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [0.45000000000000018, 0.45000000000000018, 0.44999999999999973, 0.44999999999999929, 0.44999999999999929, 0.45000000000000018],
+      "base": [0, 0, 0, 0, 0, 0],
+      "x": [2.2250000000000001, 3.2250000000000001, 4.2249999999999996, 5.2249999999999996, 6.2249999999999996, 1.2250000000000001],
+      "y": [7301, 16605, 20574, 19517, 11098, 6413],
+      "text": ["Estimate: 7,301 <br> MOE: <U+00B1> 1,972", "Estimate: 16,605 <br> MOE: <U+00B1> 4,159", "Estimate: 20,574 <br> MOE: <U+00B1> 4,810", "Estimate: 19,517 <br> MOE: <U+00B1> 5,250", "Estimate: 11,098 <br> MOE: <U+00B1> 1,808", "Estimate: 6,413 <br> MOE: <U+00B1> 2,669"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(0,101,152,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Male",
+      "legendgroup": "Male",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [1.7749999999999999, 2.7749999999999999, 3.7749999999999999, 4.7750000000000004, 5.7750000000000004, 0.77500000000000002],
+      "y": [6675, 11944, 17783, 18466, 12331, 5481],
+      "text": ["Estimate: 6,675 <br> MOE: <U+00B1> 2,147", "Estimate: 11,944 <br> MOE: <U+00B1> 3,487", "Estimate: 17,783 <br> MOE: <U+00B1> 4,230", "Estimate: 18,466 <br> MOE: <U+00B1> 4,712", "Estimate: 12,331 <br> MOE: <U+00B1> 1,945", "Estimate: 5,481 <br> MOE: <U+00B1> 1,810"],
+      "type": "scatter",
+      "mode": "lines",
+      "opacity": 1,
+      "line": {
+        "color": "transparent"
+      },
+      "error_y": {
+        "array": [2147, 3487, 4230, 4712, 1945, 1810],
+        "arrayminus": [2147, 3487, 4230, 4712, 1945, 1810],
+        "type": "data",
+        "width": 1.088709677419351,
+        "symmetric": false,
+        "color": "rgba(158,27,24,1)"
+      },
+      "name": "Female",
+      "legendgroup": "Female",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [2.2250000000000001, 3.2250000000000001, 4.2249999999999996, 5.2249999999999996, 6.2249999999999996, 1.2250000000000001],
+      "y": [7301, 16605, 20574, 19517, 11098, 6413],
+      "text": ["Estimate: 7,301 <br> MOE: <U+00B1> 1,972", "Estimate: 16,605 <br> MOE: <U+00B1> 4,159", "Estimate: 20,574 <br> MOE: <U+00B1> 4,810", "Estimate: 19,517 <br> MOE: <U+00B1> 5,250", "Estimate: 11,098 <br> MOE: <U+00B1> 1,808", "Estimate: 6,413 <br> MOE: <U+00B1> 2,669"],
+      "type": "scatter",
+      "mode": "lines",
+      "opacity": 1,
+      "line": {
+        "color": "transparent"
+      },
+      "error_y": {
+        "array": [1972, 4159, 4810, 5250, 1808, 2669],
+        "arrayminus": [1972, 4159, 4810, 5250, 1808, 2669],
+        "type": "data",
+        "width": 1.088709677419351,
+        "symmetric": false,
+        "color": "rgba(158,27,24,1)"
+      },
+      "name": "Male",
+      "legendgroup": "Male",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 23.305936073059364,
+      "r": 7.3059360730593621,
+      "b": 29.555832295558329,
+      "l": 38.854296388542963
+    },
+    "paper_bgcolor": "rgba(255,255,255,1)",
+    "font": {
+      "color": "rgba(0,0,0,1)",
+      "family": "",
+      "size": 14.611872146118724
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [0.40000000000000002, 6.5999999999999996],
+      "tickmode": "array",
+      "ticktext": ["<10", "10-17", "18-29", "30-44", "45-64", "65+"],
+      "tickvals": [1, 2, 3, 3.9999999999999996, 5, 6],
+      "categoryorder": "array",
+      "categoryarray": ["<10", "10-17", "18-29", "30-44", "45-64", "65+"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969286
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [-1269.2, 26653.200000000001],
+      "tickmode": "array",
+      "ticktext": ["0", "3k", "6k", "9k", "12k", "15k", "18k", "21k", "24k"],
+      "tickvals": [0, 3000, 5999.9999999999991, 9000, 12000, 15000.000000000002, 18000, 21000, 24000],
+      "categoryorder": "array",
+      "categoryarray": ["0", "3k", "6k", "9k", "12k", "15k", "18k", "21k", "24k"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969279
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": true,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(0,0,0,1)",
+        "family": "",
+        "size": 11.689497716894984
+      },
+      "title": {
+        "text": "Sex",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative"
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "7b44401d1ea3": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {},
+      "fill": {},
+      "text": {},
+      "type": "bar"
+    },
+    "7b4432542328": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {},
+      "fill": {},
+      "text": {}
+    }
+  },
+  "cur_data": "7b44401d1ea3",
+  "visdat": {
+    "7b44401d1ea3": ["function (y) ", "x"],
+    "7b4432542328": ["function (y) ", "x"]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "Measure": "Citywide Population (2026)",
+    "Estimate": "158,300",
+    "MOE": ""
+  },
+  {
+    "Measure": "Downtown Population (2020-2024)",
+    "Estimate": "16,160",
+    "MOE": "1,099"
+  },
+  {
+    "Measure": "Foreign Born Population (2025)",
+    "Estimate": "47.1%",
+    "MOE": "3.2%"
+  },
+  {
+    "Measure": "People of Color (2025)",
+    "Estimate": "63%",
+    "MOE": "3.5%"
+  },
+  {
+    "Measure": "Median Household Income (2025)",
+    "Estimate": "$148,481",
+    "MOE": "$20,175"
+  }
+]

@@ -1,0 +1,269 @@
+{
+  "data": [
+    {
+      "orientation": "v",
+      "width": [0.44999999999999929, 0.45000000000000007, 0.45000000000000018, 0.44999999999999929, 0.44999999999999973, 0.44999999999999929, 0.45000000000000018, 0.44999999999999929, 0.44999999999999929, 0.44999999999999929],
+      "base": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "x": [8.7750000000000004, 0.77500000000000036, 2.7750000000000004, 5.7750000000000004, 3.7750000000000004, 6.7750000000000004, 1.7750000000000004, 7.7750000000000004, 4.7750000000000004, 9.7750000000000004],
+      "y": [2227, 18736, 6307, 3423, 4391, 3000, 7180, 2714, 3518, 2001],
+      "text": ["Estimate: 2,227 <br> MOE: <U+00B1> 715 <br> Percent LEP: 36.9% <br> MOE: <U+00B1> 6.0%", "Estimate: 18,736 <br> MOE: <U+00B1> 1,464 <br> Percent LEP: 39.9% <br> MOE: <U+00B1> 4.2%", "Estimate: 6,307 <br> MOE: <U+00B1> 1,153 <br> Percent LEP: 9.6% <br> MOE: <U+00B1> 3.7%", "Estimate: 3,423 <br> MOE: <U+00B1> 1,018 <br> Percent LEP: 45.7% <br> MOE: <U+00B1> 15.2%", "Estimate: 4,391 <br> MOE: <U+00B1> 955 <br> Percent LEP: 47.9% <br> MOE: <U+00B1> 10.9%", "Estimate: 3,000 <br> MOE: <U+00B1> 933 <br> Percent LEP: 38.0% <br> MOE: <U+00B1> 9.6%", "Estimate: 7,180 <br> MOE: <U+00B1> 1,316 <br> Percent LEP: 41.9% <br> MOE: <U+00B1> 7.4%", "Estimate: 2,714 <br> MOE: <U+00B1> 811 <br> Percent LEP: 18.1% <br> MOE: <U+00B1> 10.5%", "Estimate: 3,518 <br> MOE: <U+00B1> 941 <br> Percent LEP: 22.1% <br> MOE: <U+00B1> 12.2%", "Estimate: 2,001 <br> MOE: <U+00B1> 681 <br> Percent LEP: 52.4% <br> MOE: <U+00B1> 12.9%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(0,101,152,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Total Speakers",
+      "legendgroup": "Total Speakers",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "orientation": "v",
+      "width": [0.44999999999999929, 0.45000000000000007, 0.45000000000000018, 0.44999999999999929, 0.44999999999999973, 0.44999999999999929, 0.45000000000000018, 0.44999999999999929, 0.44999999999999929, 0.44999999999999929],
+      "base": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "x": [9.2249999999999996, 1.2249999999999996, 3.2249999999999996, 6.2249999999999996, 4.2249999999999996, 7.2249999999999996, 2.2249999999999996, 8.2249999999999996, 5.2249999999999996, 10.225],
+      "y": [821, 7471, 604, 1566, 2105, 1140, 3007, 491, 779, 1049],
+      "text": ["Estimate: 821 <br> MOE: <U+00B1> 296 <br> Percent LEP: 36.9% <br> MOE: <U+00B1> 6.0%", "Estimate: 7,471 <br> MOE: <U+00B1> 984 <br> Percent LEP: 39.9% <br> MOE: <U+00B1> 4.2%", "Estimate: 604 <br> MOE: <U+00B1> 257 <br> Percent LEP: 9.6% <br> MOE: <U+00B1> 3.7%", "Estimate: 1,566 <br> MOE: <U+00B1> 698 <br> Percent LEP: 45.7% <br> MOE: <U+00B1> 15.2%", "Estimate: 2,105 <br> MOE: <U+00B1> 661 <br> Percent LEP: 47.9% <br> MOE: <U+00B1> 10.9%", "Estimate: 1,140 <br> MOE: <U+00B1> 457 <br> Percent LEP: 38.0% <br> MOE: <U+00B1> 9.6%", "Estimate: 3,007 <br> MOE: <U+00B1> 765 <br> Percent LEP: 41.9% <br> MOE: <U+00B1> 7.4%", "Estimate: 491 <br> MOE: <U+00B1> 321 <br> Percent LEP: 18.1% <br> MOE: <U+00B1> 10.5%", "Estimate: 779 <br> MOE: <U+00B1> 478 <br> Percent LEP: 22.1% <br> MOE: <U+00B1> 12.2%", "Estimate: 1,049 <br> MOE: <U+00B1> 440 <br> Percent LEP: 52.4% <br> MOE: <U+00B1> 12.9%"],
+      "type": "bar",
+      "textposition": "none",
+      "marker": {
+        "autocolorscale": false,
+        "color": "rgba(193,102,35,1)",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": "transparent"
+        }
+      },
+      "name": "Speakers with Limited English Proficiency",
+      "legendgroup": "Speakers with Limited English Proficiency",
+      "showlegend": true,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [8.7750000000000004, 0.77500000000000002, 2.7749999999999999, 5.7750000000000004, 3.7749999999999999, 6.7750000000000004, 1.7749999999999999, 7.7750000000000004, 4.7750000000000004, 9.7750000000000004],
+      "y": [2227, 18736, 6307, 3423, 4391, 3000, 7180, 2714, 3518, 2001],
+      "text": ["Estimate: 2,227 <br> MOE: <U+00B1> 715 <br> Percent LEP: 36.9% <br> MOE: <U+00B1> 6.0%", "Estimate: 18,736 <br> MOE: <U+00B1> 1,464 <br> Percent LEP: 39.9% <br> MOE: <U+00B1> 4.2%", "Estimate: 6,307 <br> MOE: <U+00B1> 1,153 <br> Percent LEP: 9.6% <br> MOE: <U+00B1> 3.7%", "Estimate: 3,423 <br> MOE: <U+00B1> 1,018 <br> Percent LEP: 45.7% <br> MOE: <U+00B1> 15.2%", "Estimate: 4,391 <br> MOE: <U+00B1> 955 <br> Percent LEP: 47.9% <br> MOE: <U+00B1> 10.9%", "Estimate: 3,000 <br> MOE: <U+00B1> 933 <br> Percent LEP: 38.0% <br> MOE: <U+00B1> 9.6%", "Estimate: 7,180 <br> MOE: <U+00B1> 1,316 <br> Percent LEP: 41.9% <br> MOE: <U+00B1> 7.4%", "Estimate: 2,714 <br> MOE: <U+00B1> 811 <br> Percent LEP: 18.1% <br> MOE: <U+00B1> 10.5%", "Estimate: 3,518 <br> MOE: <U+00B1> 941 <br> Percent LEP: 22.1% <br> MOE: <U+00B1> 12.2%", "Estimate: 2,001 <br> MOE: <U+00B1> 681 <br> Percent LEP: 52.4% <br> MOE: <U+00B1> 12.9%"],
+      "type": "scatter",
+      "mode": "lines",
+      "opacity": 1,
+      "line": {
+        "color": "transparent"
+      },
+      "error_y": {
+        "array": [715, 1464, 1153, 1018, 955, 933, 1316, 811, 941, 681],
+        "arrayminus": [715, 1464, 1153, 1018, 955, 933, 1316, 811, 941, 681],
+        "type": "data",
+        "width": 0.66176470588236247,
+        "symmetric": false,
+        "color": "rgba(158,27,24,1)"
+      },
+      "name": "Total Speakers",
+      "legendgroup": "Total Speakers",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    },
+    {
+      "x": [9.2249999999999996, 1.2250000000000001, 3.2250000000000001, 6.2249999999999996, 4.2249999999999996, 7.2249999999999996, 2.2250000000000001, 8.2249999999999996, 5.2249999999999996, 10.225],
+      "y": [821, 7471, 604, 1566, 2105, 1140, 3007, 491, 779, 1049],
+      "text": ["Estimate: 821 <br> MOE: <U+00B1> 296 <br> Percent LEP: 36.9% <br> MOE: <U+00B1> 6.0%", "Estimate: 7,471 <br> MOE: <U+00B1> 984 <br> Percent LEP: 39.9% <br> MOE: <U+00B1> 4.2%", "Estimate: 604 <br> MOE: <U+00B1> 257 <br> Percent LEP: 9.6% <br> MOE: <U+00B1> 3.7%", "Estimate: 1,566 <br> MOE: <U+00B1> 698 <br> Percent LEP: 45.7% <br> MOE: <U+00B1> 15.2%", "Estimate: 2,105 <br> MOE: <U+00B1> 661 <br> Percent LEP: 47.9% <br> MOE: <U+00B1> 10.9%", "Estimate: 1,140 <br> MOE: <U+00B1> 457 <br> Percent LEP: 38.0% <br> MOE: <U+00B1> 9.6%", "Estimate: 3,007 <br> MOE: <U+00B1> 765 <br> Percent LEP: 41.9% <br> MOE: <U+00B1> 7.4%", "Estimate: 491 <br> MOE: <U+00B1> 321 <br> Percent LEP: 18.1% <br> MOE: <U+00B1> 10.5%", "Estimate: 779 <br> MOE: <U+00B1> 478 <br> Percent LEP: 22.1% <br> MOE: <U+00B1> 12.2%", "Estimate: 1,049 <br> MOE: <U+00B1> 440 <br> Percent LEP: 52.4% <br> MOE: <U+00B1> 12.9%"],
+      "type": "scatter",
+      "mode": "lines",
+      "opacity": 1,
+      "line": {
+        "color": "transparent"
+      },
+      "error_y": {
+        "array": [296, 984, 257, 698, 661, 457, 765, 321, 478, 440],
+        "arrayminus": [296, 984, 257, 698, 661, 457, 765, 321, 478, 440],
+        "type": "data",
+        "width": 0.66176470588236247,
+        "symmetric": false,
+        "color": "rgba(158,27,24,1)"
+      },
+      "name": "Speakers with Limited English Proficiency",
+      "legendgroup": "Speakers with Limited English Proficiency",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 23.305936073059364,
+      "r": 7.3059360730593621,
+      "b": 29.555832295558329,
+      "l": 38.854296388542963
+    },
+    "paper_bgcolor": "rgba(255,255,255,1)",
+    "font": {
+      "color": "rgba(0,0,0,1)",
+      "family": "",
+      "size": 14.611872146118724
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [0.40000000000000002, 10.6],
+      "tickmode": "array",
+      "ticktext": ["Chinese", "Spanish", "Hindi", "Korean", "Telugu", "Japanese", "Russian", "Tamil", "Cantonese", "Vietnamese"],
+      "tickvals": [1, 2, 3, 4, 5, 6.0000000000000009, 7, 8, 9, 10],
+      "categoryorder": "array",
+      "categoryarray": ["Chinese", "Spanish", "Hindi", "Korean", "Telugu", "Japanese", "Russian", "Tamil", "Cantonese", "Vietnamese"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969286
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": false,
+      "gridcolor": null,
+      "gridwidth": 0,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [-1010, 21210],
+      "tickmode": "array",
+      "ticktext": ["0", "3k", "6k", "9k", "2k", "15k", "18k"],
+      "tickvals": [0, 2999.9999999999995, 6000, 9000, 11999.999999999998, 14999.999999999998, 18000],
+      "categoryorder": "array",
+      "categoryarray": ["0", "3k", "6k", "9k", "2k", "15k", "18k"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "sans",
+        "size": 18.596928185969279
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [],
+    "showlegend": true,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(0,0,0,1)",
+        "family": "",
+        "size": 11.689497716894984
+      },
+      "title": {
+        "text": "Group",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "x": 0.29999999999999999,
+      "y": 100
+    },
+    "hovermode": "closest",
+    "barmode": "relative"
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "7b4422cb2cc1": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {},
+      "fill": {},
+      "text": {},
+      "type": "bar"
+    },
+    "7b44639d1fd": {
+      "x": {},
+      "y": {},
+      "ymin": {},
+      "ymax": {},
+      "fill": {},
+      "text": {}
+    }
+  },
+  "cur_data": "7b4422cb2cc1",
+  "visdat": {
+    "7b4422cb2cc1": ["function (y) ", "x"],
+    "7b44639d1fd": ["function (y) ", "x"]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+}
