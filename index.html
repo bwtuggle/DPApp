@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demographic Profile of the City of Bellevue</title>
 <link rel="stylesheet" href="lib/leaflet.css">
+<link rel="stylesheet" href="lib/maplibre-gl.css">
 <style>
   :root { --brand:#006598; --ink:#222; --muted:#555; --line:#d9dee3; --bg:#fff; }
   * { box-sizing: border-box; }
@@ -72,6 +73,8 @@
 </div>
 
 <script src="lib/leaflet.js"></script>
+<script src="lib/maplibre-gl.js"></script>
+<script src="lib/leaflet-maplibre-gl.js"></script>
 <script src="lib/plotly.min.js"></script>
 <script>
 (function () {
@@ -254,13 +257,15 @@
     Promise.all([getJSON("data/tracts.geojson"), getJSON("data/inferno.json")]).then(function (res) {
       var geo = res[0], ramp = res[1];
       var map = L.map(mapDiv, { zoomControl: false }).setView([47.585, -122.156], 11);
-      // Map tiles: unchanged from the original app (Stadia Maps, Alidade Smooth).
-      L.tileLayer("https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png", {
-        maxZoom: 20,
-        attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> ' +
-          '&copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> ' +
-          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
+      // Basemap: OpenFreeMap "Positron" (open source, free, no API key; OpenStreetMap data).
+      // If the browser has no WebGL, the tract layer still draws on a plain background.
+      try {
+        L.maplibreGL({ style: "https://tiles.openfreemap.org/styles/positron",
+          attribution: '<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> ' +
+            '&copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> ' +
+            'Data from <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+        }).addTo(map);
+      } catch (err) { console.warn("Basemap unavailable:", err); }
 
       var layer = null, legend = null;
       mapState = { map: map };
